@@ -18,6 +18,14 @@ let unlockClass = "fa-lock-open";
 
 let ticketsArr = [];
 
+if(localStorage.getItem("jira_tickets")) {
+    // Retrieve and display tickets
+    ticketsArr = JSON.parse(localStorage.getItem("jira_tickets"));
+    ticketsArr.forEach((ticketObj) => {
+        createTicket(ticketObj.ticketColor, ticketObj.ticketContent, ticketObj.ticketId);
+    })
+}
+
 for (let i = 0; i < toolBoxColors.length; i++) {
     toolBoxColors[i].addEventListener("click", (e) => {
         let currentToolBoxColor = toolBoxColors[i].classList[0];
