@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jira-ticket-clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="toolbox-cont">
+      <div class="icon-heading">
+        <h1>J-T-C</h1>
+        <h5><em>Jira-ticket-clone</em></h5>
+      </div>
+      <div class="toolbox-priority-cont">
+        <div class="lightpink color"></div>
+        <div class="lightgreen color"></div>
+        <div class="lightblue color"></div>
+        <div class="black color"></div>
+      </div>
+      <div class="action-btn-cont">
+        <div class="add-btn">
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="remove-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="instructions">
+        <i class="fa-solid fa-star"></i>
+        <p>
+          Press shift after writing <br />
+          your query to create ticket.
+        </p>
+      </div>
+    </div>
+    <!-- MAIN CONTAINER -->
+    <div class="main-cont">
+      <!-- <div class="ticket-cont">
+        <div class="ticket-color ${ticketColor}"></div>
+        <div class="ticket-id">asdfasdf</div>
+        <div class="task-area">asdfasdf</div>
+        <div class="ticket-lock">
+          <i class="fas fa-lock"></i>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="modal-cont">
+      <textarea spellcheck="false" class="textarea-cont" required></textarea>
+      <div class="priority-colors-cont">
+        <div class="priority-color lightpink"></div>
+        <div class="priority-color lightblue"></div>
+        <div class="priority-color lightgreen"></div>
+        <div class="priority-color black border"></div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
