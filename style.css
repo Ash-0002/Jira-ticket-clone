@@ -35,6 +35,20 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.color {
+    height: 1.5rem;
+    width: 3rem;
+    background-color: #D2DAFF;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.color:hover {
+    opacity: 0.6;
+    transform: translateY(-3px);
+}
+
 .action-btn-cont {
     height: 3.5rem;
     width: 8rem;
@@ -57,19 +71,7 @@
     transform: translateY(-3px);
 }
 
-.color {
-    height: 1.5rem;
-    width: 3rem;
-    background-color: #D2DAFF;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-}
 
-.color:hover {
-    opacity: 0.6;
-    transform: translateY(-3px);
-}
 
 .lightpink {
     background-color: lightpink;
@@ -102,7 +104,7 @@
     gap: 10px;
 }
 
-.instructions > i {
+.instructions>i {
     color: red;
 }
 
@@ -163,7 +165,7 @@
 
 .main-cont {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 3rem;
     gap: 2rem;
     justify-content: space-evenly;
@@ -172,10 +174,11 @@
 
 .ticket-cont {
     height: 14rem;
-    width: 17rem;
+    width: 20rem;
     border-radius: 5px;
     background-color: #f1f2f6;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    overflow: hidden;
 }
 
 .ticket-color {
@@ -198,7 +201,7 @@
     outline: none;
     overflow: auto;
     font-weight: 600;
-    font-family:cursive;
+    font-family: cursive;
 }
 
 .task-area::-webkit-scrollbar {
@@ -221,6 +224,69 @@
     background-color: #eaeaeb;
 }
 
-.ticket-lock > i {
+.ticket-lock>i {
     cursor: pointer;
+}
+
+
+/* MEDIA QUERY  */
+
+@media screen and (max-width: 1100px) {
+    
+
+    .toolbox-cont>.icon-heading {
+        /* margin-right: 0; */
+        display: none;
+    }
+
+    .modal-cont {
+        height: 45vh;
+        width: 50vw;
+    }
+
+    .priority-colors-cont > .priority-color {
+        height: 2.5rem;
+        width: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .toolbox-priority-cont {
+         gap: 10px;
+        padding: 10px;
+        height: 2.5rem;
+    }
+
+    .toolbox-priority-cont > .color{
+        height: 1rem;
+        width: 2rem;
+    }
+
+    .action-btn-cont {
+        height: 2.5rem;
+    }
+
+    .action-btn-cont>* {
+        font-size: 1.5rem;
+    }
+    .main-cont {
+        place-items: center;
+        gap: 3rem;
+    }
+
+    .instructions {
+        display: none;
+    }
+
+    .ticket-cont > .task-area {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px ) {
+
+    .toolbox-priority-cont {
+        margin: 0;
+    }
 }
